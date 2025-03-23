@@ -1,0 +1,100 @@
+ Copyright (c) 2024  Cenk Sasmaztin <cenk@oxoonetworkscom>
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+# OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+# OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+# SUCH DAMAGE.
+#
+#PURPOSE of this SCRIPT
+#This code connects to a network device and retrieves the current working configuration. 
+#It then detects the changes made, creates a report with the first lines of changes, 
+#and also backs up the new version of the configuration.
+#
+# This script requires the following variables to be defined:
+# 
+
+
+
+
+
+
+
+Video Conferencing Latency Test Tool
+This Python script measures the network latency to popular video conferencing platforms (Zoom, Teams, Google Meet). It logs the latency data, visualizes it in a graph, and stores the reports for future analysis.
+
+Features
+
+Measures ping latency to predefined video conferencing servers.
+Automatically saves logs and graphs in a designated directory.
+Provides platform-specific insights (Zoom, Teams, Google Meet).
+Compatible with Windows, Linux, and macOS.
+Prerequisites
+
+Python 3.x installed.
+Required libraries: matplotlib.
+Install dependencies:
+
+pip install matplotlib
+Usage
+
+Clone or download the script.
+Run the script:
+python meeting_test.py
+Latency data will be collected and saved in the meeting_test directory.
+Output
+
+Graph: Latency over time for each platform.
+Log files: Detailed latency measurements stored in the meeting_test directory.
+Notes
+
+Ensure a stable internet connection for accurate results.
+The script uses the ping command, so administrative permissions may be required in some environments.
+Türkçe Versiyon
+
+Video Konferans Gecikme Test Aracı
+Bu Python betiği, Zoom, Microsoft Teams ve Google Meet gibi popüler video konferans platformlarına olan ağ gecikmesini ölçer. Gecikme verilerini kaydeder, grafik halinde görselleştirir ve gelecekteki analizler için raporlar oluşturur.
+
+Özellikler
+
+Belirlenmiş video konferans sunucularına ping gecikmesini ölçer.
+Günlükleri ve grafik raporlarını belirtilen bir dizine otomatik olarak kaydeder.
+Platform bazlı analiz sağlar (Zoom, Teams, Google Meet).
+Windows, Linux ve macOS ile uyumludur.
+Gereksinimler
+
+Python 3.x yüklü olmalı.
+Gerekli kütüphaneler: matplotlib.
+Bağımlılıkları yüklemek için:
+
+pip install matplotlib
+Kullanım
+
+Betiği klonlayın veya indirin.
+Betiği çalıştırın:
+python meeting_test.py
+Gecikme verileri toplanacak ve meeting_test dizinine kaydedilecektir.
+Çıktı
+
+Grafik: Her platform için zaman içindeki gecikmeler.
+Log dosyaları: Ayrıntılı gecikme ölçümleri meeting_test dizininde saklanır.
+Notlar
+
+Doğru sonuçlar için stabil bir internet bağlantınız olduğundan emin olun.
+Betik ping komutunu kullandığı için bazı ortamlarda yönetici izinleri gerekebilir.

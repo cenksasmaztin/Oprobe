@@ -1,0 +1,104 @@
+ Copyright (c) 2024  Cenk Sasmaztin <cenk@oxoonetworkscom>
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+# OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+# OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+# SUCH DAMAGE.
+#
+#PURPOSE of this SCRIPT
+#This code connects to a network device and retrieves the current working configuration. 
+#It then detects the changes made, creates a report with the first lines of changes, 
+#and also backs up the new version of the configuration.
+#
+# This script requires the following variables to be defined:
+# 
+
+
+
+Flent RRUL Test Runner
+This Python script automates the execution of Flent's RRUL tests. It collects network performance metrics, saves the results in a specified directory, and generates both textual and graphical reports.
+
+Features
+
+Automates Flent's RRUL test.
+Allows configuration of server IP, test duration, and output directory.
+Outputs test results in text and PNG graph formats.
+Organizes results with timestamps for easy tracking.
+Prerequisites
+
+Python 3.x installed.
+Flent installed and accessible via the command line.
+Install Flent using the package manager:
+
+sudo apt install flent
+Usage
+
+Clone or download the script.
+Run the script with:
+python flent_rrul_test.py
+Example command:
+python flent_rrul_test.py --server_ip 192.168.1.1 --output_dir results --duration 300
+--server_ip: IP address of the Netperf server (required).
+--output_dir: Directory to store results (default: flent_results).
+--duration: Duration of each test in seconds (default: 300).
+Output
+
+Textual and graphical reports saved in the specified output directory.
+File naming includes timestamps for easy identification.
+Notes
+
+Ensure that the Netperf server is reachable and configured before running the tests.
+Review Flent documentation for advanced usage.
+Türkçe Versiyon
+
+Flent RRUL Test Çalıştırıcı
+Bu Python betiği, Flent'in RRUL testlerini otomatikleştirir. Ağ performans metriklerini toplar, sonuçları belirli bir dizine kaydeder ve hem metin hem de grafik raporlar oluşturur.
+
+Özellikler
+
+Flent'in RRUL testini otomatikleştirir.
+Sunucu IP'si, test süresi ve çıktı dizini yapılandırılabilir.
+Test sonuçlarını metin ve PNG grafik formatlarında kaydeder.
+Sonuçları zaman damgaları ile organize eder.
+Gereksinimler
+
+Python 3.x yüklü olmalı.
+Flent kurulmuş ve komut satırından erişilebilir olmalı.
+Flent'i yüklemek için:
+
+sudo apt install flent
+Kullanım
+
+Betiği klonlayın veya indirin.
+Betiği şu şekilde çalıştırın:
+python flent_rrul_test.py
+Örnek komut:
+python flent_rrul_test.py --server_ip 192.168.1.1 --output_dir results --duration 300
+--server_ip: Netperf sunucusunun IP adresi (zorunlu).
+--output_dir: Sonuçların kaydedileceği dizin (varsayılan: flent_results).
+--duration: Her bir testin süresi (saniye cinsinden, varsayılan: 300).
+Çıktı
+
+Belirtilen çıktı dizininde metin ve grafik raporlar oluşturulur.
+Dosya adlandırması, kolay tanımlama için zaman damgalarını içerir.
+Notlar
+
+Testleri çalıştırmadan önce Netperf sunucusunun erişilebilir ve yapılandırılmış olduğundan emin olun.
+Gelişmiş kullanım için Flent belgelerini inceleyin.

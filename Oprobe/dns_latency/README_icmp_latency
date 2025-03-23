@@ -1,0 +1,90 @@
+ Copyright (c) 2024  Cenk Sasmaztin <cenk@oxoonetworkscom>
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+# OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+# OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+# SUCH DAMAGE.
+#
+#PURPOSE of this SCRIPT
+#This code connects to a network device and retrieves the current working configuration. 
+#It then detects the changes made, creates a report with the first lines of changes, 
+#and also backs up the new version of the configuration.
+#
+# This script requires the following variables to be defined:
+# 
+
+
+
+
+
+DNS Latency Measurement Tool
+This Python script measures DNS query latencies for a list of popular domains and visualizes the results in a graphical format. It is useful for analyzing DNS performance over time.
+
+Features
+
+Measures latency for DNS queries (in milliseconds).
+Supports a predefined list of popular domains.
+Generates real-time visualizations using matplotlib.
+Logs results for further analysis.
+Prerequisites
+
+Python 3.x
+Required libraries: dnspython, matplotlib, datetime
+Install the dependencies:
+
+pip install dnspython matplotlib
+Usage
+
+Clone or download the script.
+Run the script:
+python dns_latency.py
+The script will display a graph showing DNS latencies and log results in the current directory.
+Output
+
+A graphical representation of DNS query latencies.
+Test results and timestamps are logged for historical analysis.
+Türkçe Versiyon
+
+DNS Gecikme Ölçüm Aracı
+Bu Python betiği, popüler alan adları için DNS sorgu gecikmelerini ölçer ve sonuçları grafiksel formatta görselleştirir. DNS performansını zaman içinde analiz etmek için kullanışlıdır.
+
+Özellikler
+
+DNS sorguları için gecikmeleri (milisaniye cinsinden) ölçer.
+Popüler alan adlarının önceden tanımlanmış bir listesini destekler.
+matplotlib kullanarak gerçek zamanlı görselleştirme sağlar.
+Analiz için sonuçları kaydeder.
+Gereksinimler
+
+Python 3.x
+Gerekli kütüphaneler: dnspython, matplotlib, datetime
+Bağımlılıkları yüklemek için:
+
+pip install dnspython matplotlib
+Kullanım
+
+Betiği klonlayın veya indirin.
+Betiği çalıştırın:
+python dns_latency.py
+Betik, DNS gecikmelerini gösteren bir grafik oluşturur ve sonuçları mevcut dizine kaydeder.
+Çıktı
+
+DNS sorgu gecikmelerinin grafiksel bir temsili.
+Test sonuçları ve zaman damgaları geçmiş analiz için kaydedilir.

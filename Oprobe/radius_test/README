@@ -1,0 +1,133 @@
+#Copyright (c) 2024  Cenk Sasmaztin <cenk@oxoonetworkscom>
+#All rights reserved.
+
+#Redistribution and use in source and binary forms, with or without
+#modification, are permitted provided that the following conditions
+#are met:
+#1. Redistributions of source code must retain the above copyright
+#notice, this list of conditions and the following disclaimer.
+#2. Redistributions in binary form must reproduce the above copyright
+#notice, this list of conditions and the following disclaimer in the
+#documentation and/or other materials provided with the distribution.
+
+#THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+#ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+#IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+#ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+#FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+#DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+#OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+#HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+#LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+#OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+#SUCH DAMAGE.
+
+
+
+
+
+This Python command-line application is used to test the connection to a RADIUS server by sending an authentication request. It is developed using the pyrad library.
+
+Requirements
+
+Python 3.x
+
+pyrad library
+
+To install dependencies:
+
+
+pip install pyrad
+
+Usage
+
+Run the following command in the terminal:
+
+python radius_test_cli.py -s <RADIUS_SERVER_IP> -u <USERNAME> -p <PASSWORD> -k <SECRET_KEY>
+
+Example:
+
+python radius_test_cli.py -s 192.168.1.1 -u testuser -p testpass -k mysecret
+
+Parameters
+
+-s, --server : The IP address of the RADIUS server
+
+-u, --username : The username to test
+
+-p, --password : The password of the user
+
+-k, --secret : The secret key of the RADIUS server
+
+Output
+
+If authentication is successful:
+
+Authentication successful!
+Test Result: SUCCESS
+
+If authentication fails:
+
+Authentication failed!
+Test Result: FAILURE
+
+If an error occurs, the error message is displayed.
+
+Notes
+
+It can be tested with a RADIUS server like FreeRADIUS.
+
+Ensure that the dictionary file /usr/share/freeradius/dictionary exists or specify an appropriate dictionary file.
+
+License
+
+This project is licensed under the MIT license.
+
+
+
+
+Bu Python komut satırı uygulaması, bir RADIUS sunucusuna kimlik doğrulama isteği göndererek bağlantıyı test etmek için kullanılır. pyrad kütüphanesi kullanılarak geliştirilmiştir.
+
+Gereksinimler
+	•	Python 3.x
+	•	pyrad kütüphanesi
+
+Kurulum için:
+
+pip install pyrad  
+
+Komut satırında aşağıdaki şekilde çalıştırabilirsiniz:
+
+python radius_test_cli.py -s <RADIUS_SERVER_IP> -u <USERNAME> -p <PASSWORD> -k <SECRET_KEY>  
+
+Örnek:
+
+python radius_test_cli.py -s 192.168.1.1 -u testuser -p testpass -k mysecret  
+
+
+Parametreler
+	•	-s, --server : RADIUS sunucusunun IP adresi
+	•	-u, --username : Test edilecek kullanıcı adı
+	•	-p, --password : Kullanıcının şifresi
+	•	-k, --secret : RADIUS sunucusunun secret anahtarı
+
+Çıktı
+
+Eğer kimlik doğrulama başarılı olursa:
+
+Authentication successful!  
+Test Result: SUCCESS  
+
+Başarısız olursa:
+
+Authentication failed!  
+Test Result: FAILURE  
+
+
+Notlar
+	•	FreeRADIUS gibi bir RADIUS sunucusu ile test edilebilir.
+	•	/usr/share/freeradius/dictionary dosyasının mevcut olduğundan emin olun ya da uygun bir sözlük dosyası belirtin.
+
+Lisans
+
+Bu proje MIT lisansı ile lisanslanmıştır.

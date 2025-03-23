@@ -1,0 +1,160 @@
+ Copyright (c) 2024  Cenk Sasmaztin <cenk@oxoonetworkscom>
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+# OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+# OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+# SUCH DAMAGE.
+#
+#PURPOSE of this SCRIPT
+#This code connects to a network device and retrieves the current working configuration. 
+#It then detects the changes made, creates a report with the first lines of changes, 
+#and also backs up the new version of the configuration.
+#
+# This script requires the following variables to be defined:
+# 
+
+
+# DNS Latency Test Tool
+
+Bu uygulama, belirli bir DNS sunucusu kullanarak dünyanın en popüler 5 web sitesinin isim çözümleme sürelerini ölçen CLI tabanlı bir DNS testi aracıdır. Ölçümler, test boyunca terminalde gösterilir ve test sonlandırıldığında sonuçlar bir grafikle raporlanır.
+
+## Özellikler
+
+- Kullanıcı tarafından girilen DNS IP adresi üzerinden test yapar.
+- Dünyanın en popüler 5 web sitesi (`google.com`, `youtube.com`, `facebook.com`, `twitter.com`, `instagram.com`) için çözümleme süresini ölçer.
+- Sürekli ölçüm yapar ve `Ctrl+C` ile test sonlandırılabilir.
+- Tüm test sonuçlarını bir grafik olarak raporlar.
+
+## Gereksinimler
+
+Bu uygulama Python 3.7+ ile uyumludur ve aşağıdaki ek Python paketlerini gerektirir:
+
+- `dnspython`
+- `matplotlib`
+
+Gerekli paketleri yüklemek için:
+```bash
+pip install dnspython matplotlib
+Kullanım
+
+Uygulamayı çalıştırın:
+python dns_resol_latency.py
+DNS IP Adresini Girin: Çalıştırma sırasında, test için kullanılacak DNS sunucusunun IP adresini girin (ör. 8.8.8.8 - Google Public DNS).
+Test Süreci:
+Uygulama, belirli aralıklarla DNS çözümleme sürelerini terminalde gösterir.
+Her çözümleme için milisaniye (ms) cinsinden süre görüntülenir.
+Program Ctrl+C tuş kombinasyonu ile durdurulabilir.
+Test Sonu:
+Program durdurulduğunda (ör. Ctrl+C), tüm test sonuçları bir grafik olarak gösterilir.
+Örnek Çalıştırma
+
+$ python dns_resol_latency.py
+Lütfen test için DNS IP adresini girin: 8.8.8.8
+Test başlıyor... Programı durdurmak için Ctrl+C'ye basın.
+google.com çözümleme süresi: 34.52 ms
+youtube.com çözümleme süresi: 40.87 ms
+facebook.com çözümleme süresi: 25.63 ms
+twitter.com çözümleme süresi: 30.19 ms
+instagram.com çözümleme süresi: 27.45 ms
+--------------------------------------------------
+...
+^C
+Test sonlandırılıyor...
+Grafik oluşturuluyor...
+Çıktı
+
+Program durdurulduktan sonra aşağıdaki gibi bir grafik oluşturulur:
+
+X Ekseni: Ölçüm numarası
+Y Ekseni: Çözümleme süresi (ms)
+Her bir site için ölçüm sonuçları ayrı bir çizgiyle gösterilir.
+
+Geliştirme ve Katkı
+
+Sorunları bildirmek veya katkıda bulunmak isterseniz bir pull request gönderebilirsiniz.
+Daha fazla özellik önerisi için lütfen iletişime geçin.
+Lisans
+
+Bu proje MIT Lisansı ile lisanslanmıştır. Daha fazla bilgi için LICENSE dosyasına göz atabilirsiniz.
+
+
+
+# DNS Latency Test Tool
+
+This application is a CLI-based DNS testing tool that measures the name resolution times for the top 5 most popular websites using a specified DNS server. Results are displayed in the terminal during the test and plotted in a graph after the test ends.
+
+## Features
+
+- Tests using a user-specified DNS server IP address.
+- Measures resolution times for the world's most popular websites (`google.com`, `youtube.com`, `facebook.com`, `twitter.com`, `instagram.com`).
+- Runs continuously until interrupted with `Ctrl+C`.
+- Displays results in real-time and plots all results in a graph at the end.
+
+## Requirements
+
+This tool requires Python 3.7+ and the following Python libraries:
+
+- `dnspython`
+- `matplotlib`
+
+Install the required packages with:
+```bash
+pip install dnspython matplotlib
+Usage
+
+Run the application:
+python dns_resol_latency.py
+Enter the DNS Server IP: When prompted, enter the IP address of the DNS server to test (e.g., 8.8.8.8 for Google Public DNS).
+Testing Process:
+The application will continuously measure DNS resolution times and display the results in the terminal.
+Each resolution time is shown in milliseconds (ms).
+The program can be stopped with the Ctrl+C key combination.
+End of Test:
+When the program is stopped (e.g., via Ctrl+C), all test results are plotted in a graph.
+Example Execution
+
+$ python dns_resol_latency.py
+Please enter the DNS server IP address: 8.8.8.8
+Starting the test... Press Ctrl+C to stop.
+google.com resolution time: 34.52 ms
+youtube.com resolution time: 40.87 ms
+facebook.com resolution time: 25.63 ms
+twitter.com resolution time: 30.19 ms
+instagram.com resolution time: 27.45 ms
+--------------------------------------------------
+...
+^C
+Test stopping...
+Generating graph...
+Output
+
+After stopping the program, the results are displayed in a graph:
+
+X-axis: Measurement number
+Y-axis: Resolution time (ms)
+Each website's resolution time is represented as a separate line.
+
+Development and Contributions
+
+To report issues or contribute, feel free to open a pull request.
+Suggestions for new features are welcome.
+License
+
+This project is licensed under the MIT License. See the LICENSE file for more details.

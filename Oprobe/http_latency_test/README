@@ -1,0 +1,97 @@
+ Copyright (c) 2024  Cenk Sasmaztin <cenk@oxoonetworkscom>
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+# OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+# OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+# SUCH DAMAGE.
+#
+#PURPOSE of this SCRIPT
+#This code connects to a network device and retrieves the current working configuration. 
+#It then detects the changes made, creates a report with the first lines of changes, 
+#and also backs up the new version of the configuration.
+#
+# This script requires the following variables to be defined:
+# 
+
+
+
+
+HTTPS Latency Measurement Tool
+This Python script measures HTTPS request latencies for a predefined list of popular websites. It logs the results and visualizes the data as a graph, enabling users to monitor and analyze website performance.
+
+Features
+
+Sends HTTPS GET requests to a list of predefined URLs.
+Measures the response latency (in milliseconds).
+Visualizes results in a graph using matplotlib.
+Logs results with timestamps for historical analysis.
+Prerequisites
+
+Python 3.x installed.
+Required libraries: requests, matplotlib.
+Install the dependencies:
+
+pip install requests matplotlib
+Usage
+
+Clone or download the script.
+Run the script:
+python https_latency.py
+The script will test each URL in the predefined list, log the results, and generate a graph of latencies.
+Output
+
+Graph: A visual representation of HTTPS latencies over time.
+Log file: Results are saved with timestamps for future analysis.
+Notes
+
+Ensure you have a stable internet connection to avoid request timeouts.
+The script uses a default timeout of 10 seconds for each HTTPS request.
+Türkçe Versiyon
+
+HTTPS Gecikme Ölçüm Aracı
+Bu Python betiği, önceden tanımlanmış popüler web siteleri için HTTPS istek gecikmelerini ölçer. Sonuçları kaydeder ve verileri bir grafik olarak görselleştirir, böylece kullanıcıların web sitesi performansını izlemelerine ve analiz etmelerine olanak tanır.
+
+Özellikler
+
+Önceden tanımlı URL'lere HTTPS GET istekleri gönderir.
+Yanıt gecikmesini (milisaniye cinsinden) ölçer.
+matplotlib kullanarak sonuçları grafik olarak görselleştirir.
+Geçmiş analiz için sonuçları zaman damgalarıyla kaydeder.
+Gereksinimler
+
+Python 3.x yüklü olmalı.
+Gerekli kütüphaneler: requests, matplotlib.
+Bağımlılıkları yüklemek için:
+
+pip install requests matplotlib
+Kullanım
+
+Betiği klonlayın veya indirin.
+Betiği çalıştırın:
+python https_latency.py
+Betik, önceden tanımlı listedeki her URL'yi test edecek, sonuçları kaydedecek ve gecikme değerlerini bir grafik olarak oluşturacaktır.
+Çıktı
+
+Grafik: HTTPS gecikmelerinin zaman içindeki görsel temsili.
+Log dosyası: Gelecek analizler için zaman damgalarıyla birlikte kaydedilmiş sonuçlar.
+Notlar
+
+Zaman aşımını önlemek için stabil bir internet bağlantınız olduğundan emin olun.
+Betik, her HTTPS isteği için varsayılan olarak 10 saniyelik bir zaman aşımı kullanır.
