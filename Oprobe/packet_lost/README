@@ -1,0 +1,117 @@
+
+
+# Copyright (c) 2024  Cenk Sasmaztin <cenk@oxoonetworks.com>
+# All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions
+# are met:
+# 1. Redistributions of source code must retain the above copyright
+#    notice, this list of conditions and the following disclaimer.
+# 2. Redistributions in binary form must reproduce the above copyright
+#    notice, this list of conditions and the following disclaimer in the
+#    documentation and/or other materials provided with the distribution.
+#
+# THIS SOFTWARE IS PROVIDED BY THE AUTHOR AND CONTRIBUTORS ``AS IS'' AND
+# ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+# IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE AUTHOR OR CONTRIBUTORS BE LIABLE
+# FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+# DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS
+# OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+# HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+# LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY
+# OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF
+# SUCH DAMAGE.
+
+# Packet Loss Test (Python)
+
+This project is a simple Python-based packet loss testing tool that sends ICMP Echo (ping) requests to a target IP address. It uses the `ping3` library to measure response time and calculate packet loss rate.
+
+## Features
+
+- Sends ICMP ping requests to a specified IP address.
+- Displays response times or timeouts.
+- Allows customization of ping count and timeout.
+- Calculates and prints packet loss percentage.
+
+## Requirements
+
+- Python 3.x
+- `ping3` library
+
+## Installation
+
+```bash
+pip install ping3
+
+
+Usage
+python packet_loss_test.py
+
+
+Customization
+target = "8.8.8.8"
+count = 30
+timeout = 1
+
+
+Sample Output
+Reply from 8.8.8.8: time=23.11 ms
+Reply from 8.8.8.8: time=22.77 ms
+...
+Request timeout
+...
+
+Packet loss: 6.67% (2/30)
+
+Notes
+	•	This script uses ping3, which generally does not require root privileges.
+	•	Firewalls may block ICMP traffic. Lack of responses may be due to network restrictions.
+	
+
+TR
+
+
+# Packet Loss Test (Python)
+
+Bu proje, belirli bir IP adresine ICMP Echo (ping) paketleri göndererek paket kaybı (packet loss) oranını ölçmek amacıyla geliştirilmiştir. `ping3` kütüphanesi kullanılarak Python diliyle yazılmıştır.
+
+## Özellikler
+
+- Belirtilen hedef IP adresine ICMP ping gönderir.
+- Yanıt süresi ve zaman aşımlarını gösterir.
+- Ping sayısını (`count`) ayarlayabilirsiniz.
+- Paket kaybı oranını hesaplar ve ekrana yazdırır.
+
+## Gereksinimler
+
+- Python 3.x
+- `ping3` kütüphanesi
+
+## Kurulum
+
+```bash
+pip install ping3
+
+Kullanım
+python packet_loss_test.py
+
+Özelleştirme
+target = "8.8.8.8"
+count = 30
+timeout = 1
+
+Örnek Çıktı
+Reply from 8.8.8.8: time=23.11 ms
+Reply from 8.8.8.8: time=22.77 ms
+...
+Request timeout
+...
+
+Packet loss: 6.67% (2/30)
+
+
+Notlar
+	•	Bu script ping3 kütüphanesini kullandığı için genellikle root yetkisi gerekmez.
+	•	Ağ güvenlik duvarları ICMP trafiğini engelleyebilir. Ping yanıtı alınamaması bu tür engellemelerden kaynaklanabilir.
