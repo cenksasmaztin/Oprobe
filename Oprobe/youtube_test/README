@@ -1,0 +1,54 @@
+README
+English
+YouTube QoE Test Script
+This script is a simple Python tool to measure YouTube streaming Quality of Experience (QoE) by resolving the direct video URL and testing the startup delay for the first 1MB of the stream.
+Requirements
+Python 3.7+
+yt-dlp installed at /usr/local/bin/yt-dlp
+curl installed on the system
+Installation
+Install yt-dlp:
+sudo pip install yt-dlp
+sudo mv $(which yt-dlp) /usr/local/bin/yt-dlp
+Make sure curl is available:
+curl --version
+Usage
+Run the script directly:
+python youtube_qoe.py
+Optionally, specify a custom YouTube video URL:
+python youtube_qoe.py "https://www.youtube.com/watch?v=VIDEO_ID"
+Output Example
+
+[ YouTube QoE Test Started ]
+Video URL Resolved:
+https://rr4---sn-xxxxx.googlevideo.com/videoplayback?expire=...
+Startup Delay (first 1MB): 820.45 ms
+Total Test Time        : 1540.21 ms
+Startup Delay → The time to fetch the first 1MB of video data
+Total Test Time → Total duration of the test, including URL resolution
+Türkçe
+YouTube QoE Test Scripti
+Bu Python scripti, YouTube yayın deneyim kalitesini (QoE) ölçmek için tasarlanmıştır. Script, videonun gerçek yayın URL’sini çözümler ve ilk 1MB’lık verinin indirilme gecikmesini test eder.
+🔧 Gereksinimler
+Python 3.7+
+yt-dlp /usr/local/bin/yt-dlp dizininde kurulu olmalı
+Sisteminizde curl kurulu olmalı
+Kurulum
+yt-dlp yükleyin:
+sudo pip install yt-dlp
+sudo mv $(which yt-dlp) /usr/local/bin/yt-dlp
+curl kurulu mu kontrol edin:
+curl --version
+Kullanım
+Script’i çalıştırın:
+python youtube_qoe.py
+İsteğe bağlı olarak farklı bir YouTube video linki verebilirsiniz:
+python youtube_qoe.py "https://www.youtube.com/watch?v=VIDEO_ID"
+Örnek Çıktı
+[ YouTube QoE Test Started ]
+Video URL Resolved:
+https://rr4---sn-xxxxx.googlevideo.com/videoplayback?expire=...
+Startup Delay (first 1MB): 820.45 ms
+Total Test Time        : 1540.21 ms
+Startup Delay → İlk 1MB video verisinin alınma süresi
+Total Test Time → URL çözümleme dahil toplam test süresi
